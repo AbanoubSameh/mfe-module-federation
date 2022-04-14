@@ -1,0 +1,14 @@
+.card {
+    margin-right: 10px;
+    width: 30%;
+}
+
+::ng-deep {
+   #testing-app-header .navbar {
+        position: relative !important;
+    }
+}
+
+#content-div{
+    min-height: 200px;
+}

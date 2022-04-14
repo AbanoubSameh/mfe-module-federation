@@ -1,0 +1,72 @@
+<div class="d-flex p-4 flex-column">
+    <h1>MFE2</h1>
+    <p>Micro-frontend application that exposes some Widgets and components that can be used by other applications</p>
+    <div class="d-flex w-100 flex-row flex-wrap ">
+        <div class="card mb-2 mr-2 p-2 pb-4">
+            <app-production-widget class="h-100"></app-production-widget>
+            <div class="card-body">
+                <h5 class="card-title">Production widget</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Widget</h6>
+                <p class="card-text">
+                    <code class="bg-light">
+                        name: 'ProductionWidgetComponent',
+                        <br>
+                        remoteName: 'mfe2_widgets',
+                        <br>
+                        remoteEntry: 'http://localhost:5200/widgetsRemoteEntry.js',
+                    </code>
+                </p>
+            </div>
+        </div>
+        <div class="card mb-2 mr-2 p-2 pb-4">
+            <app-sales-widget class="h-100"></app-sales-widget>
+            <div class="card-body">
+                <h5 class="card-title">Sales widget</h5>
+                <p class="card-text">
+                    <code class="bg-light">
+                        name: 'SalesWidgetComponent',
+                        <br>
+                        remoteName: 'mfe2_widgets',
+                        <br>
+                        remoteEntry: 'http://localhost:5200/widgetsRemoteEntry.js',
+                    </code>
+                </p>
+            </div>
+        </div>
+        <div class="card mb-2 mr-2 p-2 pb-4">
+            <app-sales-widget class="h-100"></app-sales-widget>
+            <div class="card-body">
+                <h5 class="card-title">Capacity widget</h5>
+                <p class="card-text">
+                    <code class="bg-light">
+                        name: 'CapacityWidgetComponent',
+                        <br>
+                        remoteName: 'mfe2_widgets',
+                        <br>
+                        remoteEntry: 'http://localhost:5200/widgetsRemoteEntry.js',
+                    </code>
+                </p>
+            </div>
+        </div>
+        <div class="card mb-2 mr-2 p-2 pb-4">
+            <div class="border d-flex flex-column w-100 h-100">
+                <app-header class="w-100" id="testing-app-header"></app-header>
+                <div id="content-div" class="flex-grow-1 p-2">
+                    Page Content
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Header component </h5>
+                <p class="card-text">
+                    <code class="bg-light">
+                        name: 'HeaderComponent',
+                        <br>
+                        remoteName: 'mfe2_shared_components',
+                        <br>
+                        remoteEntry: 'http://localhost:5200/remoteEntry.js',
+                    </code>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="p-4">
+    <h5 class="mb-4">Manage App Features</h5>
+    <div class="d-flex">
+        <ng-container *ngIf="availableRemoteModules$ | async as available">
+            <div class="card mr-2" style="width: 18rem;">
+                <div class="card-header">
+                    Available Fatures
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let item of available">{{item.displayName}} <a
+                            href="javascript:void(0)"
+                            (click)="remoteModulesService.importRemoteModule(item)">(import)</a></li>
+                </ul>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="importedModules$ | async as imported">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Imported Fatures
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let item of imported">{{item.displayName}} <a
+                            href="javascript:void(0)"
+                            (click)="remoteModulesService.removeRemoteModule(item)">(remove)</a>
+                    </li>
+                </ul>
+            </div>
+        </ng-container>
+    </div>
+</div>

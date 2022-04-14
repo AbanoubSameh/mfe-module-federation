@@ -1,0 +1,9 @@
+<div class="header-container">
+  <ng-container *ngIf="headerComponentSpec$  | async as header">
+    <app-remote-component-wrapper [remoteComponentSpec]="header">
+    </app-remote-component-wrapper>
+  </ng-container>
+</div>
+<div class="flex-grow-1 w-100">
+  <router-outlet></router-outlet>
+</div>

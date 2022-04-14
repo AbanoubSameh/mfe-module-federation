@@ -1,0 +1,22 @@
+<div class="p-4">
+    <h5 class="mb-4">Dashboard</h5>
+    <div class="col-lg-6 d-flex flex-row">
+        <select #SelectWidget class="form-control mr-2" name="cars" id="cars">
+            <option *ngFor="let item of remoteComponentsService.availableWidgets" [value]="item.name">
+                {{item.displayName}}
+            </option>
+        </select>
+        <button (click)="addWidget(SelectWidget.value)" type="button" class="btn btn-success">Add </button>
+    </div>
+</div>
+<div class="d-flex flex-row flex-wrap">
+    <ng-container *ngIf="importedWidgets$ | async as widgets">
+        <div class="widget border m-2 d-flex flex-column align-items-center" *ngFor="let widget of widgets">
+            <h5 class="mb-0">{{widget.displayName}} </h5>
+            <span class="text-muted mb-2"> (remote component) </span>
+            <app-remote-component-wrapper [remoteComponentSpec]="widget">
+            </app-remote-component-wrapper>
+        </div>
+    </ng-container>
+
+</div>
