@@ -22,7 +22,7 @@ Run the Shell and the micro-frontend
 ```
 yarn start
 ```
-Will run the shell on [http://localhost:4200/](http://localhost:4200/), mfe1 application on [http://localhost:5000/](http://localhost:5000/), and mfe2 on [http://localhost:5200/](http://localhost:5200/) 
+Will run the shell on [http://localhost:4200/](http://localhost:4200/), mfe1 application on [http://localhost:5100/](http://localhost:5100/), and mfe2 on [http://localhost:5200/](http://localhost:5200/) 
 
 # Understand the workspace
 
